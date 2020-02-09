@@ -16,11 +16,12 @@
 package com.oreilly.springdata.jpa.core;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.querydsl.QueryDslPredicateExecutor;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -28,7 +29,14 @@ import org.springframework.data.repository.CrudRepository;
  * 
  * @author Oliver Gierke
  */
-public interface ProductRepository extends CrudRepository<Product, Long>, QueryDslPredicateExecutor<Product> {
+public interface ProductRepository extends CrudRepository<Product, Long>, QuerydslPredicateExecutor<Product> {
+	/**
+	 * Returns the {@link Product} with the given identifier.
+	 *
+	 * @param id the id to search for.
+	 * @return Optional Product
+	 */
+	Optional<Product> findById( Long id);
 
 	/**
 	 * Returns a {@link Page} of {@link Product}s having a description which contains the given snippet.

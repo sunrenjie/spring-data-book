@@ -61,7 +61,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.mysema.querydsl</groupId>
+            <groupId>com.querydsl</groupId>
             <artifactId>querydsl-lucene</artifactId>
             <version>${querydsl.version}</version>
             <optional>true</optional>
@@ -76,7 +76,7 @@
                 <version>1.0.8</version>
                 <dependencies>
                     <dependency>
-                        <groupId>com.mysema.querydsl</groupId>
+                        <groupId>com.querydsl</groupId>
                         <artifactId>querydsl-apt</artifactId>
                         <version>${querydsl.version}</version>
                     </dependency>

@@ -44,6 +44,8 @@ public class JpaCustomerRepositoryIntegrationTest extends AbstractIntegrationTes
 		customer = repository.save(customer);
 
 		assertThat(customer.getId(), is(notNullValue()));
+		Customer c = repository.findById(customer.getId());
+		assertEquals(customer, c);
 	}
 
 	@Test

@@ -30,7 +30,7 @@ public interface CustomerRepository extends Repository<Customer, Long> {
 	 * @param id the id to search for.
 	 * @return
 	 */
-	Customer findOne(Long id);
+	Customer findById(Long id);
 
 	/**
 	 * Saves the given {@link Customer}.

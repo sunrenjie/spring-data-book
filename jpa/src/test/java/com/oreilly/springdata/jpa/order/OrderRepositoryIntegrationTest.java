@@ -21,6 +21,7 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.hamcrest.Matcher;
 import org.junit.Test;
@@ -55,10 +56,11 @@ public class OrderRepositoryIntegrationTest extends AbstractIntegrationTest {
 	public void createOrder() {
 
 		Customer dave = customerRepository.findByEmailAddress(new EmailAddress("dave@dmband.com"));
-		Product iPad = productRepository.findOne(1L);
+		Optional<Product> iPad = productRepository.findById(1L);
+		assertTrue(iPad.isPresent());
 
 		Order order = new Order(dave, dave.getAddresses().iterator().next());
-		order.add(new LineItem(iPad));
+		order.add(new LineItem(iPad.get()));
 
 		order = repository.save(order);
 		assertThat(order.getId(), is(notNullValue()));

@@ -14,13 +14,13 @@
 	<dependencies>
 	
 		<dependency>
-			<groupId>com.mysema.querydsl</groupId>
+			<groupId>com.querydsl</groupId>
 			<artifactId>querydsl-collections</artifactId>
 			<version>${querydsl.version}</version>
 		</dependency>
 	
 		<dependency>
-			<groupId>com.mysema.querydsl</groupId>
+			<groupId>com.querydsl</groupId>
 			<artifactId>querydsl-core</artifactId>
 			<version>${querydsl.version}</version>
 		</dependency>
@@ -35,7 +35,7 @@
 				<version>1.0.8</version>
 				<dependencies>
 					<dependency>
-						<groupId>com.mysema.querydsl</groupId>
+						<groupId>com.querydsl</groupId>
 						<artifactId>querydsl-apt</artifactId>
 						<version>${querydsl.version}</version>
 					</dependency>

@@ -47,6 +47,8 @@ public class CustomerRepositoryIntegrationTest extends AbstractIntegrationTest {
 
 		Customer result = repository.save(dave);
 		assertThat(result.getId(), is(notNullValue()));
+		Customer c = repository.findById(result.getId());
+		assertEquals(result, c);
 	}
 
 	@Test

@@ -27,7 +27,7 @@ import org.springframework.stereotype.Repository;
  * @author Oliver Gierke
  */
 @Repository
-class JpaCustomerRepository implements CustomerRepository {
+public class JpaCustomerRepository implements CustomerRepository {
 
 	@PersistenceContext
 	private EntityManager em;
@@ -37,7 +37,7 @@ class JpaCustomerRepository implements CustomerRepository {
 	 * @see com.oreilly.springdata.jpa.core.CustomerRepository#findOne(java.lang.Long)
 	 */
 	@Override
-	public Customer findOne(Long id) {
+	public Customer findById(Long id) {
 		return em.find(Customer.class, id);
 	}
 

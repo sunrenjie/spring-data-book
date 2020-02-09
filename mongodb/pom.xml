@@ -38,7 +38,7 @@
 		<!-- Querydsl -->
 		
 		<dependency>
-			<groupId>com.mysema.querydsl</groupId>
+			<groupId>com.querydsl</groupId>
 			<artifactId>querydsl-mongodb</artifactId>
 			<version>${querydsl.version}</version>
 		</dependency>
