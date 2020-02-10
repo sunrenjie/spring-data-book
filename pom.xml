@@ -12,7 +12,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>5.2.2.RELEASE</spring.version>
-		<slf4j.version>1.7.25</slf4j.version>
+		<slf4j.version>1.7.30</slf4j.version>
 		<logback.version>1.2.3</logback.version>
 		<querydsl.version>4.2.2</querydsl.version>
 		<hamcrest.version>2.2</hamcrest.version>
@@ -21,11 +21,14 @@
 
 	<modules>
 		<module>jpa</module>
+		<!-- The jdbc module relies on querydsl 3.x and older versions of spring; provide no valuable info either.
+		The jpa provides some spring integrations with querydsl that still work.
+		<module>jdbc</module>
+		-->
 		<!-- TODO re-eanble these modules after dependencies are fixed.
 		<module>mongodb</module>
 		<module>querydsl</module>
 		<module>neo4j</module>
-		<module>jdbc</module>
 		<module>redis</module>
 		<module>gemfire</module>
 		<module>rest</module>
